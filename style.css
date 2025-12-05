@@ -1,0 +1,653 @@
+.center-text {
+    text-align: center;
+}
+
+.Titolo1 {
+    font-family: 'Bitter', serif;
+    font-size: 6rem;        /* puoi aumentare */
+    font-weight: 200;       /* Birthstone usa solo 400 */
+    color: #ffffff;         /* cambia se vuoi */
+    text-align: center;     /* se vuoi centrarlo */
+    margin-top: 0px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.Titolo2 {
+    font-family: 'Bitter', serif;
+    font-size: 2rem;
+    color: rgb(72, 72, 72);
+    text-align: center;
+    margin-top: 150px;
+}
+
+.Titolo3 {
+    font-family: 'Bitter', serif;
+    font-size: 3rem;        /* puoi aumentare */
+    font-weight: 200;       /* Birthstone usa solo 400 */
+    color: #ffffff;         /* cambia se vuoi */
+    text-align: center;     /* se vuoi centrarlo */
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.Titolo4 {
+    font-family: 'Bitter', serif;
+    font-size: 3rem;        /* puoi aumentare */
+    font-weight: 200;       /* Birthstone usa solo 400 */
+    color: #ffffff;         /* cambia se vuoi */
+    text-align: center;     /* se vuoi centrarlo */
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.FirstSec {
+    margin-top: 70px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.SecondSec {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 0 40px;
+    margin-top: 120px;
+}
+
+.ThirdSec {
+    margin-left: 90px;
+    margin-right: 90px;
+    margin-top: 90px;
+}
+
+/* colore lettere click */ 
+.green {
+    color: #22c55e;
+    font-weight: 700;
+    animation: neon-flicker 2.8s infinite;
+}
+
+/* Effetto neon difettoso */
+@keyframes neon-flicker {
+    0%, 20%, 22%, 63%, 64%, 70%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px #22c55e, 0 0 20px #22c55e77, 0 0 30px #22c55e55;
+    }
+    21%, 62%, 65%, 69% {
+        opacity: 0.2; /* lampeggio */
+        text-shadow: none;
+    }
+}
+
+/*CUSTOM BARRA IN ALTO
+/* NAVBAR GLASSMORPHISM */
+.navbar-glass {
+    background: rgba(0, 0, 0, 0.35) !important; /* leggera oscurata */
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px) !important;
+
+    border-bottom: 1px solid rgba(0, 255, 0, 0.5) !important;
+    box-shadow: 0 0 12px rgba(0, 255, 0, 0.25);
+}
+
+/* LINK STYLE */
+.navbar-glass .nav-link {
+    color: #e8e8e8 !important;
+    position: relative;
+    transition: 0.25s;
+    font-weight: 500;
+}
+
+/* NEON UNDERLINE */
+.navbar-glass .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #39ff14;
+    border-radius: 2px;
+    box-shadow: 0 0 6px #39ff14, 0 0 12px #39ff14;
+    transition: width 0.25s ease-in-out;
+}
+
+.navbar-glass .nav-link:hover {
+    color: #39ff14 !important;
+    text-shadow: 0 0 8px #39ff14;
+}
+
+.navbar-glass .nav-link:hover::after {
+    width: 100%;
+}
+
+
+
+/* Bottone click verde */
+.btn-neon {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 30px 30px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    background-color: #22c55e;
+    color: #000;
+    font-weight: 1000;
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 0 15px #22c55e55;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-neon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px #22c55e, 0 0 40px #22c55e;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center; /* centra orizzontalmente */
+}
+
+/* --- Pagina Project: sfera 3D + lista progetti --- */
+
+.project-main {
+    margin-top: 0;
+    padding-top: 70px;  /* spazio sotto la navbar fixed */
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 70px);
+}
+
+/* Contenitore della sfera 3D */
+.sphere-section {
+    flex: 1 1 70%;                      /* piú spazio alla sfera */
+    height: calc(100vh - 70px);         /* occupa quasi tutto lo schermo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.6s ease, flex-basis 0.6s ease;
+    overflow: visible;                  /* niente taglio interno */
+}
+
+/* Canvas three.js dentro il container */
+/* Canvas three.js dentro il container:
+   niente !important così non viene stirato male */
+   #container-3d canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+
+/* Pannello progetti/skill sulla destra */
+.projects-section {
+    padding: 24px clamp(16px, 4vw, 64px);
+    background: #000000;                    /* 🔥 pannello nero pieno */
+    backdrop-filter: blur(10px);
+    border-left: 1px solid rgba(148, 163, 184, 0.3);
+    position: relative;
+    height: calc(100vh - 70px);             /* full height */
+    overflow-y: auto;
+}
+
+
+.projects-title {
+    font-family: 'Bitter', serif;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+/* Stato base: pannello nascosto */
+.tech-panel {
+    flex: 0 0 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(40px);
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        flex-basis 0.4s ease;
+}
+
+/* Quando un logo viene cliccato: aggiungiamo body.detail-open */
+body.detail-open .sphere-section {
+    flex-basis: 60%;             /* sfera un po’ più piccola ma sempre grande */
+    transform: translateX(-5%);
+}
+
+body.detail-open .tech-panel {
+    flex-basis: 40%;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+/* Bottone X del pannello */
+.tech-panel__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: #e5e5e5;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Testo descrizione tech */
+.tech-description {
+    font-size: 0.95rem;
+    color: #cbd5f5;
+    margin-bottom: 16px;
+}
+
+/* Lista progetti */
+.tech-projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tech-projects-list li {
+    margin-bottom: 10px;
+}
+
+.tech-projects-list a {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.tech-projects-list a:hover {
+    text-decoration: underline;
+}
+
+/* Responsivo: su schermi piccoli pannello va sotto la sfera */
+@media (max-width: 992px) {
+    .project-main {
+        flex-direction: column;
+    }
+
+    .sphere-section {
+        flex-basis: auto;
+        height: 70vh;
+        transform: none !important;
+    }
+
+    body.detail-open .sphere-section {
+        transform: none;
+    }
+
+    .tech-panel {
+        flex-basis: auto;
+        transform: translateY(20px);
+        height: auto;
+        max-height: none;
+    }
+
+    body.detail-open .tech-panel {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+.skills-chart-wrapper {
+    position: relative;
+    height: 320px; 
+    width: 100%;
+}
+
+.point-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.point-row {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.point-row:hover {
+    transform: translateX(8px);
+    opacity: 1;
+}
+
+/* Stato iniziale: sezione nascosta leggermente più in basso */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+/* Quando diventa visibile */
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Icone PNG */
+.point-row img {
+    width: 170px;      /* dimensione icona (modifica come vuoi) */
+    height: auto;
+    flex-shrink: 0;
+    opacity: 0.9;
+    margin-top: 70px;
+}
+
+/* Titolo del punto */
+.point-row h3 {
+    margin-top: 70px;
+    font-family: 'Bitter', serif;  /* come volevi tu */
+    font-size: 3rem;
+    color: #e5e5e5;
+}
+
+/* Descrizione del punto */
+.point-row p {
+    margin: 5px 0 0 0;
+    font-size: 2rem;
+    color: #bbbbbb;
+    line-height: 1.6;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    /*background-image: url("/Users/lorenzobroggi/Desktop/PROGETTI PER CV/Sito web/SfondoStelle1.jpg"); */
+    background-color: #000000;
+    overflow-x: hidden;
+    background-attachment: fixed;  
+    background-size: cover;        
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;  
+}
+
+
+/* Layer di sfondo con codice */
+.bg-code {
+    position: fixed;
+    inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
+    z-index: -1;              /* sta sotto a tutto il resto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;     /* così non blocca i click sul sito */
+    overflow: hidden;
+}
+
+/* Testo del codice */
+.bg-code__text {
+    font-family: 'Roboto Mono', monospace;
+    font-size: clamp(6rem, 15vw, 14rem); /* GIGANTE */
+    font-weight: 300;
+    line-height: 1.2;
+    white-space: pre;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.05); /* leggero per non disturbare troppo */
+    transform: translateY(0);
+    will-change: transform;
+}
+
+
+
+
+
+
+
+
+
+/* === OVERRIDE FINALE LAYOUT PAGINA PROJECT === */
+
+/* Layout principale: sfera a sinistra, pannello a destra */
+.project-main {
+    margin-top: 0;
+    padding-top: 70px;                 /* sotto navbar fixed */
+    display: flex !important;          /* forzo flex */
+    flex-direction: row !important;    /* orizzontale */
+    min-height: calc(100vh - 70px);
+  }
+  
+  /* Contenitore sfera 3D */
+  .sphere-section {
+    flex: 0 0 100%;                    /* stato base: occupa tutto */
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      transform 0.5s ease,
+      flex-basis 0.5s ease;
+    overflow: visible;
+  }
+  
+  /* Canvas three.js */
+  #container-3d canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  /* Pannello a destra */
+  .projects-section.tech-panel {
+    padding: 24px clamp(16px, 4vw, 64px);
+    background: #000;                           /* nero pieno */
+    border-left: 1px solid rgba(148, 163, 184, 0.3);
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    flex: 0 0 0;                                /* nascosto di base */
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(40px);
+    transition:
+      opacity 0.4s ease,
+      transform 0.4s ease,
+      flex-basis 0.4s ease;
+  }
+  
+  /* Quando un logo viene cliccato (body.detail-open messo da JS) */
+  body.detail-open .sphere-section {
+    flex-basis: 60% !important;   /* sfera a sinistra */
+    transform: translateX(-5%);
+  }
+  
+  body.detail-open .projects-section.tech-panel {
+    flex-basis: 40% !important;   /* pannello largo */
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+  }
+  
+  /* Titolo / descrizione nel pannello */
+  .projects-title {
+    font-family: 'Bitter', serif;
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+  
+  .tech-description {
+    font-size: 0.95rem;
+    color: #cbd5f5;
+    margin-bottom: 16px;
+  }
+  
+  .tech-projects-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .tech-projects-list li {
+    margin-bottom: 10px;
+  }
+  .tech-projects-list a {
+    color: #22c55e;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .tech-projects-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* X chiudi pannello */
+  .tech-panel__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: #e5e5e5;
+    font-size: 1.8rem;
+    cursor: pointer;
+    line-height: 1;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .project-main {
+      flex-direction: column !important;
+    }
+    .sphere-section {
+      flex-basis: auto !important;
+      height: 70vh;
+      transform: none !important;
+    }
+    body.detail-open .sphere-section {
+      transform: none !important;
+    }
+    .projects-section.tech-panel {
+      flex-basis: auto !important;
+      transform: translateY(20px);
+      height: auto;
+      max-height: none;
+    }
+    body.detail-open .projects-section.tech-panel {
+      transform: translateY(0);
+    }
+  }
+
+/* il canvas deve stare sotto */
+.sphere-section canvas,
+.scene-container canvas {
+  position: absolute;
+  z-index: 1 !important;
+}
+
+/* il pannello deve stare sopra */
+.tech-panel {
+  position: relative;
+  z-index: 5 !important;
+}
+
+.footer-black {
+    background-color: #000 !important;
+  }
+  
+
+
+
+
+
+  /* Layout contatti */
+.contact-layout {
+    position: relative;
+    z-index: 1; /* sopra lo sfondo con codice */
+  }
+  
+  /* Foto a destra */
+  .contact-photo {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+  
+  /* Lista contatti sotto la foto */
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .contact-list a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .contact-list a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Iconcine PNG (telefono, mail, ecc.) */
+  .contact-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+  }
+  
+  /* Card dei tre blocchi */
+  .info-card {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    padding: 18px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  /* Immagini dentro i blocchi */
+  .card-img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  /* Vinile interattivo */
+  .vinyl-container {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+  }
+  
+  .vinyl {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+  }
+  
+  .spinning {
+    animation: spin 4s linear infinite;
+  }
+  
+  .album-cover {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 45px;
+    left: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Animazione */
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  
