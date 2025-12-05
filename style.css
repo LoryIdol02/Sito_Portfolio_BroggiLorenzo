@@ -630,6 +630,7 @@ body {
     height: 160px;
     border-radius: 50%;
   }
+
   
   .spinning {
     animation: spin 4s linear infinite;
