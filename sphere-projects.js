@@ -23,7 +23,7 @@ const TECHS = [
   {
     id: "js",
     name: "JavaScript",
-    logo: "./Loghi/js.png",
+    logo: "./Loghi/Js.png",
     description: "Le mia consocenze nel linguaggio javascript nascono durante lo sviluppo dei miei primi sitiweb, in cui era possibile modificare e implementare script. Successivamente ho sviluppato consocienze tramite corsi al fine di migliorare interazione e animazioni. Un esempio dei risultati ottenuti è la sfera di questo sito, sviluppata tramite la libreria di 'Three.js'.",
     projects: [
       { label: "Gioco JavaScript", url: "#" },
@@ -33,7 +33,7 @@ const TECHS = [
   {
     id: "python",
     name: "Python",
-    logo: "./Loghi/python.png",
+    logo: "./Loghi/Python.png",
     description: "Linguaggio versatile che ho imparato autonomamente, e successivamente rinforzato nel mio percorso accademico durante il corso di 'Bigdata'. Esperienza e conoscienza base, con una logica forte derivata da esprienza in altri linguaggi orientati ad oggetti.",
     projects: [
       { label: "Script automazione", url: "#" },
@@ -43,7 +43,7 @@ const TECHS = [
   {
     id: "java",
     name: "Java",
-    logo: "./Loghi/java.png",
+    logo: "./Loghi/Java.png",
     description: "Linguaggio orientato ad oggetti che ho utilizzato maggiormente, in particolar modo nel mio percorso accedemico, l'esame di 'Programmazione' riguardava la logica e la sintassi di Java. Ho sviluppato anche un progetto con dei miei colleghi universitari per un'altro esame interamente con questo linguaggio di programmazione. Sottostante sono presenti i link di questo progetto.",
     projects: [
       { label: "App Java", url: "#" },
@@ -53,7 +53,7 @@ const TECHS = [
   {
     id: "sql",
     name: "SQL",
-    logo: "./Loghi/sql.png",
+    logo: "./Loghi/Sql.png",
     description: "Linguaggio che ho appreso durante il mio percorso accademico, sviluppatoe e imparato con particolare attenzione. Durante il mio percorso di studi, ho voluto scegliere come insegnamento facoltativo il secondo esame di 'Base di dati', con esperienza in PostgreSQL. ",
     projects: [
       { label: "Database relazionale", url: "#" }
