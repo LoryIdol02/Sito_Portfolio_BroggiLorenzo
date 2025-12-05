@@ -5,7 +5,7 @@ const TECHS = [
   {
     id: "html",
     name: "HTML",
-    logo: "./Loghi/Html.png",
+    logo: "./Loghi/HTML.png",
     description: "Ho sviluppato conoscenze in HTMl e CSS durante il mio percorso di studi e anche nel mio percorso accademico. Negl'anni ho avuto la possibilità di utilizzare diverse librerie (es. bootstrap) che mi hanno permesso di eseguire lavori grafici di livello. In questi anni ho avuto modo di operare su diversi sviluppi di siti web, tra cui questo medesimo.",
     projects: [
       { label: "Sito web sviluppato nel 2023", url: "#" }
@@ -23,7 +23,7 @@ const TECHS = [
   {
     id: "js",
     name: "JavaScript",
-    logo: "./Loghi/Js.png",
+    logo: "./Loghi/JS.png",
     description: "Le mia consocenze nel linguaggio javascript nascono durante lo sviluppo dei miei primi sitiweb, in cui era possibile modificare e implementare script. Successivamente ho sviluppato consocienze tramite corsi al fine di migliorare interazione e animazioni. Un esempio dei risultati ottenuti è la sfera di questo sito, sviluppata tramite la libreria di 'Three.js'.",
     projects: [
       { label: "Gioco JavaScript", url: "#" },
@@ -53,7 +53,7 @@ const TECHS = [
   {
     id: "sql",
     name: "SQL",
-    logo: "./Loghi/Sql.png",
+    logo: "./Loghi/SQL.png",
     description: "Linguaggio che ho appreso durante il mio percorso accademico, sviluppatoe e imparato con particolare attenzione. Durante il mio percorso di studi, ho voluto scegliere come insegnamento facoltativo il secondo esame di 'Base di dati', con esperienza in PostgreSQL. ",
     projects: [
       { label: "Database relazionale", url: "#" }
