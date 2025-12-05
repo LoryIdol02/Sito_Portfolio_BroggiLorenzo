@@ -5,7 +5,7 @@ const TECHS = [
   {
     id: "html",
     name: "HTML",
-    logo: "./Loghi/html.png",
+    logo: "./Loghi/Html.png",
     description: "Ho sviluppato conoscenze in HTMl e CSS durante il mio percorso di studi e anche nel mio percorso accademico. Negl'anni ho avuto la possibilità di utilizzare diverse librerie (es. bootstrap) che mi hanno permesso di eseguire lavori grafici di livello. In questi anni ho avuto modo di operare su diversi sviluppi di siti web, tra cui questo medesimo.",
     projects: [
       { label: "Sito web sviluppato nel 2023", url: "#" }
