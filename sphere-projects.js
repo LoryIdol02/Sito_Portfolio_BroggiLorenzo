@@ -296,50 +296,85 @@ function initNeonSphere() {
   // portare il logo PRECISAMENTE al centro frontale.
  // sphere-projects.js
 
-function startFocus(sprite) {
+ function startFocus(sprite) {
   const techId = sprite.userData.techId;
   if (!techId) return;
 
-  // 1. SETUP INIZIALE (Queste righe devono rimanere fuori dal setTimeout)
-  isFocusing = true;
+  // stessa soglia del CSS: sotto i 992px consideriamo "mobile"
+  const isMobile = window.innerWidth < 992;
+
+  // il dettaglio viene aperto in ogni caso
   isDetailOpen = true;
+
+  // 1) aggiorna il contenuto del pannello
+  setPanelContent(techId);
+
+  // 2) aggiungi la classe che fa comparire il pannello + sistema il canvas
+  setTimeout(() => {
+    document.body.classList.add("detail-open");
+    updateRendererSize();
+  }, 10);
+
+  // 📱 — MOBILE: niente animazione sfera, solo scroll al pannello
+  if (isMobile) {
+    isFocusing = false; // nessuna animazione di focus
+
+    const panel =
+      document.getElementById("tech-panel") ||
+      document.querySelector(".projects-section.tech-panel");
+
+    if (panel) {
+      // delay per far comparire il pannello e far assestare il layout
+      setTimeout(() => {
+        const rect = panel.getBoundingClientRect();
+
+        // offset per la navbar (70px) così il pannello non resta nascosto sotto
+        const offset = 80;
+
+        const targetY = rect.top + window.scrollY - offset;
+
+        window.scrollTo({
+          top: targetY,
+          behavior: "smooth"
+        });
+      }, 300);
+    }
+
+    // non eseguire l'animazione desktop
+    return;
+  }
+
+
+  // 💻 — DESKTOP: comportamento vecchio (animazione sfera)
+  isFocusing = true;
   focusStartTime = performance.now();
 
-  // 2. AGGIORNAMENTO CONTENUTO
-  setPanelContent(techId);
-  setTimeout(updateRendererSize, 0);
-
-  // 🔥 FIX DEFINITIVO: Ritarda l'aggiunta della classe.
-  // Mettendo l'aggiunta della classe in un setTimeout anche di 0ms o 10ms,
-  // si forza il browser a passare alla coda del rendering successivo.
-  setTimeout(() => {
-      document.body.classList.add("detail-open");
-  }, 10); // 10ms è un valore sicuro e non percepibile
-
-  // 3. SETUP ANIMAZIONE SFERA (DEVE ESSERE QUI E SINCRONO)
-  // Questa parte anima la sfera, e deve essere eseguita immediatamente.
-  focusFromQuat.copy(group.quaternion); 
+  // stato iniziale
+  focusFromQuat.copy(group.quaternion);
   focusFromScale.copy(group.scale);
-  // ... (il resto del setup della rotazione, come focusToQuat, ecc.)
 
-    // direzione attuale del logo nello spazio MONDO
-    const worldPos = sprite.getWorldPosition(new THREE.Vector3());
-    const worldDir = worldPos.clone().normalize();     // da origine al logo
-    const frontDir = new THREE.Vector3(0, 0, 1);       // direzione verso la camera
+  // calcola la direzione del logo nello spazio mondo
+  const worldPos = sprite.getWorldPosition(new THREE.Vector3());
+  const worldDir = worldPos.clone().normalize(); // da origine al logo
+  const frontDir = new THREE.Vector3(0, 0, 1);   // verso la camera
 
-    // rotazione R che porta worldDir -> frontDir
-    const rotQuat = new THREE.Quaternion().setFromUnitVectors(
-      worldDir,
-      frontDir
-    );
+  // rotazione che porta worldDir -> frontDir
+  const rotQuat = new THREE.Quaternion().setFromUnitVectors(
+    worldDir,
+    frontDir
+  );
 
-    // nuova rotazione target: R * Q (Q = orientazione corrente del gruppo)
-    const currentQuat = group.quaternion.clone();
-    focusToQuat.copy(rotQuat).multiply(currentQuat);
+  // nuova rotazione target: R * orientazione corrente
+  const currentQuat = group.quaternion.clone();
+  focusToQuat.copy(rotQuat).multiply(currentQuat);
 
-    // sfera un po' più piccola quando è in focus
-    focusToScale.set(0.8, 0.8, 0.8);
-  }
+  // sfera un po' più piccola in focus
+  focusToScale.set(0.8, 0.8, 0.8);
+}
+
+
+
+
 
   function closePanel() {
     // sblocchiamo lo stato "dettaglio"

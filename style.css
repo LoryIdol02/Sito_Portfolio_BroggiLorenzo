@@ -639,16 +639,23 @@ body {
       transform: none !important;
     }
     body.detail-open .sphere-section {
+      flex-basis: auto !important;
+      height: 70vh;
       transform: none !important;
     }
+
     .projects-section.tech-panel {
       flex-basis: auto !important;
-      transform: translateY(20px);
+      transform: translateY(1px);
       height: auto;
       max-height: none;
     }
+
     body.detail-open .projects-section.tech-panel {
+      opacity: 1;
+      pointer-events: auto;
       transform: translateY(0);
+      /* niente flex-basis % → prende tutta la larghezza sotto la sfera */
     }
   }
 
