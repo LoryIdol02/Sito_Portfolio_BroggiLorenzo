@@ -297,6 +297,10 @@ body.detail-open .tech-panel {
 
 
 @media (max-width: 992px) {
+  .container{
+    margin-top: 0px;
+  }
+  
   .Titolo1 {
     font-family: 'Bitter', serif;
     font-size: 2.5rem;      
@@ -333,7 +337,7 @@ body.detail-open .tech-panel {
     font-weight: 200;       /* Birthstone usa solo 400 */
     color: #ffffff;         /* cambia se vuoi */
     text-align: center;     /* se vuoi centrarlo */
-    margin-top: 40px;
+    margin-top: 0px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -632,15 +636,16 @@ body {
   @media (max-width: 992px) {
     .project-main {
       flex-direction: column !important;
+      margin-bottom: 0px;
     }
     .sphere-section {
       flex-basis: auto !important;
-      height: 70vh;
+      height: 50vh;
       transform: none !important;
     }
     body.detail-open .sphere-section {
       flex-basis: auto !important;
-      height: 70vh;
+      height: 60vh;
       transform: none !important;
     }
 
