@@ -296,6 +296,49 @@ body.detail-open .tech-panel {
 }
 
 
+@media (max-width: 992px) {
+  .Titolo1 {
+    font-family: 'Bitter', serif;
+    font-size: 2rem;      
+    font-weight: 200;      
+    color: #ffffff;        
+    text-align: center;     
+    margin-top: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.Titolo2 {
+    font-family: 'Bitter', serif;
+    font-size: 1rem;
+    color: rgb(72, 72, 72);
+    text-align: center;
+    margin-top: 40px;
+}
+
+.Titolo3 {
+    font-family: 'Bitter', serif;
+    font-size: 3rem;        /* puoi aumentare */
+    font-weight: 200;       /* Birthstone usa solo 400 */
+    color: #ffffff;         /* cambia se vuoi */
+    text-align: center;     /* se vuoi centrarlo */
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.Titolo4 {
+    font-family: 'Bitter', serif;
+    font-size: 3rem;        /* puoi aumentare */
+    font-weight: 200;       /* Birthstone usa solo 400 */
+    color: #ffffff;         /* cambia se vuoi */
+    text-align: center;     /* se vuoi centrarlo */
+    margin-top: 40px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+}
+
 
 
 
