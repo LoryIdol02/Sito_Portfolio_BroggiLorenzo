@@ -128,9 +128,9 @@
 /* Bottone click verde */
 .btn-neon {
     display: inline-block;
-    margin-top: 40px;
-    padding: 30px 30px;
-    font-size: 1.5rem;
+    margin-top: 30px;
+    padding: 20px 20px;
+    font-size: 1.3rem;
     border-radius: 8px;
     background-color: #22c55e;
     color: #000;
@@ -299,11 +299,11 @@ body.detail-open .tech-panel {
 @media (max-width: 992px) {
   .Titolo1 {
     font-family: 'Bitter', serif;
-    font-size: 2rem;      
+    font-size: 2.5rem;      
     font-weight: 200;      
     color: #ffffff;        
     text-align: center;     
-    margin-top: 0px;
+    margin-top: 10px;
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -313,7 +313,7 @@ body.detail-open .tech-panel {
     font-size: 1rem;
     color: rgb(72, 72, 72);
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .Titolo3 {
@@ -334,13 +334,56 @@ body.detail-open .tech-panel {
     color: #ffffff;         /* cambia se vuoi */
     text-align: center;     /* se vuoi centrarlo */
     margin-top: 40px;
-    margin-left: 200px;
+    margin-left: 40px;
     margin-right: 200px;
 }
+
+.FirstSec {
+  margin-top: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.SecondSec {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 0 40px;
+  margin-top: 70px;
+}
+
+.ThirdSec {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 70px;
+}
+
+/* Icone PNG */
+.point-row img {
+  width: 100px;      /* dimensione icona (modifica come vuoi) */
+  height: auto;
+  flex-shrink: 0;
+  opacity: 0.9;
+  margin-top: 50px;
+}
+
+/* Titolo del punto */
+.point-row h3 {
+  margin-top: 50px;
+  font-family: 'Bitter', serif;  /* come volevi tu */
+  font-size: 1.5rem;
+  color: #e5e5e5;
+}
+
+/* Descrizione del punto */
+.point-row p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  color: #bbbbbb;
+  line-height: 1.6;
 }
 
 
-
+}
 
 
 .skills-chart-wrapper {
@@ -402,6 +445,35 @@ body.detail-open .tech-panel {
     color: #bbbbbb;
     line-height: 1.6;
 }
+
+@media (max-width: 992px) {
+  /* Icone PNG */
+.point-row img {
+  width: 100px;      /* dimensione icona (modifica come vuoi) */
+  height: auto;
+  flex-shrink: 0;
+  opacity: 0.9;
+  margin-top: 20px;
+}
+
+/* Titolo del punto */
+.point-row h3 {
+  margin-top: 20px;
+  font-family: 'Bitter', serif;  /* come volevi tu */
+  font-size: 1.5rem;
+  color: #e5e5e5;
+}
+
+/* Descrizione del punto */
+.point-row p {
+  margin: 5px 0 0 0;
+  font-size: 1rem;
+  color: #bbbbbb;
+  line-height: 1.6;
+}
+
+}
+
 
 body {
     font-family: 'Roboto', sans-serif;
