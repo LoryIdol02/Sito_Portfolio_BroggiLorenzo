@@ -24,13 +24,19 @@ const TECHS = [
     id: "js",
     name: "JavaScript",
     logo: "./Loghi/JS.png",
-    description: "Le mia consocenze nel linguaggio javascript nascono durante lo sviluppo dei miei primi sitiweb, in cui era possibile modificare e implementare script. Successivamente ho sviluppato consocienze tramite corsi al fine di migliorare interazione e animazioni. Un esempio dei risultati ottenuti è la sfera di questo sito, sviluppata tramite la libreria di 'Three.js'."
+    description: "Le mia consocenze nel linguaggio javascript nascono durante lo sviluppo dei miei primi sitiweb, in cui era possibile modificare e implementare script. Successivamente ho sviluppato consocienze tramite corsi al fine di migliorare interazione e animazioni. Un esempio dei risultati ottenuti è la sfera di questo sito, sviluppata tramite la libreria di 'Three.js'.",
+    projects: [
+      {}
+    ]
   },
   {
     id: "python",
     name: "Python",
     logo: "./Loghi/Python.png",
-    description: "Linguaggio versatile che ho imparato autonomamente, e successivamente rinforzato nel mio percorso accademico durante il corso di 'Bigdata'. Esperienza e conoscienza base, con una logica forte derivata da esprienza in altri linguaggi orientati ad oggetti."
+    description: "Linguaggio versatile che ho imparato autonomamente, e successivamente rinforzato nel mio percorso accademico durante il corso di 'Bigdata'. Esperienza e conoscienza base, con una logica forte derivata da esprienza in altri linguaggi orientati ad oggetti.",
+    projects: [
+      {}
+    ]
   },
   {
     id: "java",
@@ -54,7 +60,10 @@ const TECHS = [
     id: "Dokerc",
     name: "docker",
     logo: "./Loghi/Docker.png",
-    description: "Studi fatti in autonomia per sviluppare competenze nel mondo DevOps e Cloud"
+    description: "Studi fatti in autonomia per sviluppare competenze nel mondo DevOps e Cloud",
+    projects: [
+      {}
+    ]
   }
 ];
 
