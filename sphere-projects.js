@@ -8,37 +8,29 @@ const TECHS = [
     logo: "./Loghi/HTML.png",
     description: "Ho sviluppato conoscenze in HTMl e CSS durante il mio percorso di studi e anche nel mio percorso accademico. Negl'anni ho avuto la possibilità di utilizzare diverse librerie (es. bootstrap) che mi hanno permesso di eseguire lavori grafici di livello. In questi anni ho avuto modo di operare su diversi sviluppi di siti web, tra cui questo medesimo.",
     projects: [
-      { label: "Sito web sviluppato nel 2023", url: "#" }
+      { label: "Sito personale portfolio", url: "https://loryidol02.github.io/Sito_Portfolio_BroggiLorenzo/" }
     ]
   },
   {
     id: "AI",
     name: "Machine Learning",
     logo: "./Loghi/AI.png",
-    description: "Machine Learning e Deep Learning sono ambiti che ho studiato e operato durante il mio percorso di tesi nel 2025. Durante questo percorso ho imparato ad utilizzare librerie quali pytorch e tensorflow, addesterando dei modelli preaddestrati a riconoscere e classificare immagini mediche. Nel link sottostante è presente il mio elaborato per la tesi che descrive a pieno il mio percorso in questo ambito.",
+    description: "Machine Learning e Deep Learning sono ambiti che ho studiato e operato durante il mio percorso di tesi nel 2025. Durante questo percorso ho imparato ad utilizzare librerie quali pytorch e tensorflow, addesterando dei modelli preaddestrati a riconoscere e classificare immagini mediche. Nel link sottostante è possibile visualizzare e scaricare i codici che ho scritto personalmente e che hanno avuto risultati determinanti per il mio studio di tesi.",
     projects: [
-      { label: "Sito web statico in HTML", url: "#" }
+      { label: "Addestramento modelli multimodali al classificamento di differenti malattie cutanee", url: "https://github.com/LoryIdol02/Tesi_AIderm" }
     ]
   },
   {
     id: "js",
     name: "JavaScript",
     logo: "./Loghi/JS.png",
-    description: "Le mia consocenze nel linguaggio javascript nascono durante lo sviluppo dei miei primi sitiweb, in cui era possibile modificare e implementare script. Successivamente ho sviluppato consocienze tramite corsi al fine di migliorare interazione e animazioni. Un esempio dei risultati ottenuti è la sfera di questo sito, sviluppata tramite la libreria di 'Three.js'.",
-    projects: [
-      { label: "Gioco JavaScript", url: "#" },
-      { label: "Interfacce dinamiche", url: "#" }
-    ]
+    description: "Le mia consocenze nel linguaggio javascript nascono durante lo sviluppo dei miei primi sitiweb, in cui era possibile modificare e implementare script. Successivamente ho sviluppato consocienze tramite corsi al fine di migliorare interazione e animazioni. Un esempio dei risultati ottenuti è la sfera di questo sito, sviluppata tramite la libreria di 'Three.js'."
   },
   {
     id: "python",
     name: "Python",
     logo: "./Loghi/Python.png",
-    description: "Linguaggio versatile che ho imparato autonomamente, e successivamente rinforzato nel mio percorso accademico durante il corso di 'Bigdata'. Esperienza e conoscienza base, con una logica forte derivata da esprienza in altri linguaggi orientati ad oggetti.",
-    projects: [
-      { label: "Script automazione", url: "#" },
-      { label: "Backend Flask", url: "#" }
-    ]
+    description: "Linguaggio versatile che ho imparato autonomamente, e successivamente rinforzato nel mio percorso accademico durante il corso di 'Bigdata'. Esperienza e conoscienza base, con una logica forte derivata da esprienza in altri linguaggi orientati ad oggetti."
   },
   {
     id: "java",
@@ -46,8 +38,7 @@ const TECHS = [
     logo: "./Loghi/Java.png",
     description: "Linguaggio orientato ad oggetti che ho utilizzato maggiormente, in particolar modo nel mio percorso accedemico, l'esame di 'Programmazione' riguardava la logica e la sintassi di Java. Ho sviluppato anche un progetto con dei miei colleghi universitari per un'altro esame interamente con questo linguaggio di programmazione. Sottostante sono presenti i link di questo progetto.",
     projects: [
-      { label: "App Java", url: "#" },
-      { label: "OOP Projects", url: "#" }
+      { label: "App Java sviluppata per esame universitario", url: "https://github.com/LoryIdol02/Laboratorio-B---climate-monitoring" }
     ]
   },
   {
@@ -56,17 +47,14 @@ const TECHS = [
     logo: "./Loghi/SQL.png",
     description: "Linguaggio che ho appreso durante il mio percorso accademico, sviluppatoe e imparato con particolare attenzione. Durante il mio percorso di studi, ho voluto scegliere come insegnamento facoltativo il secondo esame di 'Base di dati', con esperienza in PostgreSQL. ",
     projects: [
-      { label: "Database relazionale", url: "#" }
+      { label: "Database relazionale utilizzato nell'app sviluppata in esame universitario", url: "https://github.com/LoryIdol02/Laboratorio-B---climate-monitoring" }
     ]
   },
   {
     id: "Dokerc",
     name: "docker",
     logo: "./Loghi/Docker.png",
-    description: "Studi fatti in autonomia per sviluppare competenze nel mondo DevOps e Cloud",
-    projects: [
-      { label: "Repository GitHub", url: "#" }
-    ]
+    description: "Studi fatti in autonomia per sviluppare competenze nel mondo DevOps e Cloud"
   }
 ];
 
